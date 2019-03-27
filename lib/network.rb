@@ -10,14 +10,19 @@ class Network
     @shows << show
   end
 
-  def highest_paid_actor
+  def payroll
     character_hash = {}
     @shows.each do |show|
       show.characters.each do |character|
         character_hash[character.actor] = character.salary
       end
     end
-    high_roller = character_hash.max_by do |character|
+    character_hash
+  end
+
+  def highest_paid_actor
+    payroll
+    high_roller = payroll.max_by do |character|
       character.last
     end
     high_roller.first
