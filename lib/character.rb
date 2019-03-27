@@ -4,7 +4,7 @@ class Character
   def initialize(name, actor, salary)
     @name = name
     @actor = actor
-    @salar = salary
+    @salary = salary
   end
 
 
