@@ -4,7 +4,7 @@ require '../lib/character'
 
 class CharacterTest < Minitest::Test
   def setup
-    @character = Character.new("KITT", "William Daniels", 1_000_000)
+    @character = Character.new({name: "KITT", actor: "William Daniels", salary: 1_000_000})
   end
 
   def test_it_exists
