@@ -16,12 +16,12 @@ class NetworkTest < Minitest::Test
   end
 
   def test_it_exists
-    assert_instance_of Show, @nbc
+    assert_instance_of Network, @nbc
   end
 
   def test_it_has_a_name_and_zero_shows_by_default
     assert_equal "NBC", @nbc.name
-    assert_equal []. @nbc.shows
+    assert_equal [], @nbc.shows
   end
 
   def test_it_can_add_shows_to_its_library
